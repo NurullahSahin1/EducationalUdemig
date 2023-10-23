@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 110px;
+    box-shadow: 1px 0px 10px;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+header a{
+    font-size: 35px;
+    text-decoration: none;
+    color: dodgerblue;
+}
+header h1{
+    color: rgb(14, 126, 21);
+}
+header h1 sup{
+    color: blue;
+    font-size: larger;    
+
+}
+
+header ul li{
+    display: flex;
+    gap: 20px;
+}
+
+
+header ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(137, 10, 36);
+    
+}
+header ul li a:hover{
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+    color: rgba(220, 20, 60, 0.532);
+    transition: .5s;
+}
+/* course meeting başlangıç */
+.course-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+   
+}
+
+.course-content .course-sec{
+    text-align: center;
+    flex: 1;
+}
+
+.course-content .image1{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.course-content .image1 img{
+    max-width:100%;
+    height: auto; 
+}
+
+.course-content .course-sec h2{
+    color: rgb(28, 86, 28);
+   
+}
+.course-content .course-sec h2 span{
+    color:cadetblue;
+    
+}
+.course-content .course-sec .course-p{
+    color: darkgray;
+    margin: 20px 0;
+}
+.course-content .course-sec .btn-1{
+    border: none;
+    padding: 10px 20px;
+    background-color: gold;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.course-content .course-sec .btn-1:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+/* meeting course bitiş */
+/* İnfo Bölümü Başlangıç */
+.info-content{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    background-color: cadetblue;
+    border-radius: 10px;
+    box-shadow: 4px 10px 19px -7px rgba(0,0,0,0.76);
+    position: relative;
+}
+.info-content .info-sec{
+    text-align: center;
+    flex: 1;
+}
+.Image-sec{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+}
+.info-content .info-sec h3{
+    background-color: rgb(50, 119, 147);
+    color: white;
+    padding: 10px 20px;
+    border-top-right-radius: 50px;
+    position: absolute;
+    top: -20px;
+    width: 50%;
+}
+.info-content .info-sec p{
+    color: black;
+    margin: 20px 0;
+}
+.info-content .info-sec button{
+    border: none;
+    padding: 10px 20px;
+    background-color: gold;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.info-content .info-sec button:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+/* İnfo Bölümü Bitiş */
+/* Card Container Başlangıç */
+.card-container{
+    margin-top: 50px;
+    text-align: center;
+    height: 300px;
+}
+.card-container h3{
+    text-align: center;
+    border-bottom: 1px solid;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    color: rgb(91, 88, 88);
+    
+}
+.card-container .card-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+.card-container .card-content .card{
+    
+    align-items: center;
+    justify-content: center;
+    box-shadow: -3px 3px 14px 3px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    
+}
+.card-container .card-content .card:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+.card-container .card-content .card p{
+    text-align: center;
+    font-weight: bold;
+    margin: 0 10px;
+}
+.card-container .card-content .card button{
+    border: none;
+    padding: 3px 7px;
+    background-color: gold;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.card-content img{
+    background-color: rgba(136, 90, 90, 0.564);
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* Card Container Başlangıç */
+/* Footer Başlangıç */
+footer{
+    border-top:1px solid gray
+}
+.footer-start{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+footer .footer-start .footer-area{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+footer .footer-start .footer-area a{
+    text-decoration: none;
+    color: darkslategrey;
+}
+footer .bottom{
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid gray;
+    padding: 20px;
+}
+/* Footer Bitiş */
+
+@media(max-width:800px){
+    .course-content, .info-content{
+        flex-direction: column-reverse;
+    }
+    header ul{
+        display: none;
+    }
+    .course-content .image1 img{
+        max-width:60%;
+        height: auto; 
+    }
+    .card-container .card-content{
+        transform: scale(0.7);
+        display: flex;
+    }
+    .card-container h3{
+        border: none;
+    }
+    .footer-start{
+        border: none;
+    }
+}
